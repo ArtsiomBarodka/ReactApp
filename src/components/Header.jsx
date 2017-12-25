@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SocialNetworks from "./SocialNetworks";
-import Menu from "./Menu";
+import MainMenu from "./MainMenu";
 import HeadTable from "./HeadTable";
 
 class Header extends Component{
@@ -8,7 +8,7 @@ class Header extends Component{
         return(
             <header>
                 <SocialNetworks></SocialNetworks>
-                <Menu></Menu>
+                <MainMenu></MainMenu>
                 <HeadTable></HeadTable>
             </header>
         )

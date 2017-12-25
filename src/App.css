@@ -3,7 +3,6 @@
     color: white;
     height: 40px;
     overflow: hidden;
-
 }
 
 .header-socialNetworks-container {
@@ -15,12 +14,6 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-}
-
-@media (max-width: 380px){
-    .header-socialNetworks-container{
-        justify-content: space-around;
-    }
 }
 
 .header-socialNetworks-container div {
@@ -41,10 +34,7 @@
 
 .header-socialNetworks-container p {
     font-size: 12px;
-    text-transform: uppercase;
-    line-height: 1.75;
     margin-left: 10px;
-    
 }
 
 .header-socialNetworks ul {
@@ -61,10 +51,104 @@
 
 
 .header-socialNetworks ul li:not(:last-child){
-    display: inline;
     margin-right: 13px;
 }
 
 .header-socialNetworks ul li:last-child{
     margin-right: 11px;
 }
+
+.header-menu{
+    background-color: #54d8f0;
+    height: 100px;
+    overflow: hidden;
+}
+
+.header-menu-container{
+    max-width: 1170px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu-container img{
+    width: 128px;
+    height: 31px;
+    margin-left: 10px;
+}
+
+.header-menu-container nav ul {
+    list-style: none; 
+    display: flex;
+    max-width: 800px;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+
+.header-menu-container-list {
+    color: white !important;
+}
+
+.checked{
+    box-shadow: 0 0 4px 2px white !important;
+}
+
+.header-menu-container-bar{
+    background-color: #54d8f0 !important;
+    display: none !important;
+}
+
+@media(max-width: 825px ){
+    .header-menu-container {
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    .header-menu-container img {
+        margin: auto;
+    }
+
+    
+
+    .header-menu-container nav ul {
+        display: none;
+    }
+
+    .header-menu-container-bar{
+        display: flex !important;
+    }
+
+}
+
+@media (max-width: 395px){
+    .header-socialNetworks{
+        height: 60px;
+    }
+
+    .header-socialNetworks-container {
+        justify-content: space-around;
+        align-content: space-between;
+    }
+
+    .header-socialNetworks-container div {
+        margin-top: 5px;
+    }
+
+    .header-menu-container {
+        justify-content: flex-end;
+    }
+
+    .header-menu-container img {
+        width: 64px;
+        height: 15.5px;
+        margin-left: 3px;
+    }
+
+    .header-menu-container-bar{
+        padding-right: 0px !important;
+    }
+}
+
+
