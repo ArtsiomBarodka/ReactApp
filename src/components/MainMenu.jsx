@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import logo from "../img/logo.png";
 import FlatButton from "material-ui/FlatButton";
-import AppBar from 'material-ui/AppBar';
-import Menu from 'material-ui/Menu';
+import IconMenu from 'material-ui/IconMenu';
+import IconButton from 'material-ui/IconButton';
 import MenuItem from 'material-ui/MenuItem';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/menu';
 
 
 class MainMenu extends Component{
@@ -16,15 +17,19 @@ class MainMenu extends Component{
     }
 
     onChangePage = (e)=>{
-        let name = e.target.closest('li').getAttribute("name");
-        (name !== this.state.selectedPage)&&this.setState({selectedPage: name});
+        let value = e.target.closest('li').getAttribute("name");
+        (value !== this.state.selectedPage)&&this.setState({selectedPage: value});
+    }
+    
+    onChangePageBar = (e, value)=>{
+        (value !== this.state.selectedPage)&&this.setState({selectedPage: value});
     }
 
     render(){
         const {pageList} = this.props;
 
         return(
-            <div className="header-menu">
+            <section className="header-menu">
                 <div className="header-menu-container">
                     <img src={logo} alt="GYM"/>
                     <nav>
@@ -39,13 +44,20 @@ class MainMenu extends Component{
                                 className="header-menu-container-list"
                                 onClick={this.onChangePage} /></li>)
                         })}</ul>
-                        <AppBar title={this.state.selectedPage}
-                        className="header-menu-container-bar"
-                        iconClassNameRight="muidocs-icon-navigation-expand-more"
-                        zDepth={0}/>
+                        <div className="header-menu-container-bar">
+                        <IconMenu iconButtonElement={<IconButton ><MoreVertIcon /></IconButton>}
+                            onChange={this.onChangePageBar}
+                            value={this.state.selectedPage}>
+                            {pageList.map((item, index)=>{
+                                return <MenuItem value={item} key={index} primaryText={item} />})}
+                        </IconMenu>
+                        <FlatButton  className="header-menu-container-bar-item"
+                            label={this.state.selectedPage} 
+                            disabled={true}/>
+                        </div>
                     </nav>
                 </div>
-            </div>
+            </section>
         )
     }
 }

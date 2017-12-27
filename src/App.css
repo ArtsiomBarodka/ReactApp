@@ -96,8 +96,18 @@
 }
 
 .header-menu-container-bar{
-    background-color: #54d8f0 !important;
     display: none !important;
+    width: 170px;
+}
+
+.header-menu-container-bar-item{
+    height: inherit !important;
+}
+
+.header-menu-container-bar-item span{
+    font-size: 18px !important;
+    color: white !important;
+    padding: 0 !important;
 }
 
 @media(max-width: 825px ){
@@ -118,7 +128,9 @@
 
     .header-menu-container-bar{
         display: flex !important;
+        align-content: center !important;
     }
+    
 
 }
 
@@ -141,14 +153,11 @@
     }
 
     .header-menu-container img {
-        width: 64px;
-        height: 15.5px;
+        
         margin-left: 3px;
     }
 
-    .header-menu-container-bar{
-        padding-right: 0px !important;
-    }
+    
 }
 
 
