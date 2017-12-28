@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import HeadTable from "./HeadTable";
 import logo from "../img/logo.png";
 import FlatButton from "material-ui/FlatButton";
 import IconMenu from 'material-ui/IconMenu';
@@ -28,7 +29,7 @@ class MainMenu extends Component{
     render(){
         const {pageList} = this.props;
 
-        return(
+        return([
             <section className="header-menu">
                 <div className="header-menu-container">
                     <img src={logo} alt="GYM"/>
@@ -57,8 +58,11 @@ class MainMenu extends Component{
                         </div>
                     </nav>
                 </div>
+            </section>,
+            <section className="Head-table">
+                <HeadTable value={this.state.selectedPage}/>
             </section>
-        )
+         ] )
     }
 }
 

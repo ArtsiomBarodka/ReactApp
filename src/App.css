@@ -130,6 +130,10 @@
         display: flex !important;
         align-content: center !important;
     }
+
+    .Head-table {
+        display: none;
+    }
     
 
 }
@@ -156,8 +160,32 @@
         
         margin-left: 3px;
     }
+}
 
+.Head-table {
+    background-color: #b7b7b7;
+    height: 300px;
+    border-bottom: solid 10px #00bff0; 
+}
+
+.Head-table-container {
+    max-width: 1170px;
+    margin: auto;
     
 }
 
+.Head-table-container-item {
+    background-color: #00bff0;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 390px;
+    display: flex;
+    justify-content: center;
+}
 
+.Head-table-container-item div {
+    color: white;
+    font-size: 25pt;
+    margin-top: 7px;
+}

@@ -1,18 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import SocialNetworks from "./SocialNetworks";
 import MainMenu from "./MainMenu";
-import HeadTable from "./HeadTable";
 
-class Header extends Component{
-    render(){
-        return(
-            <header>
-                <SocialNetworks></SocialNetworks>
-                <MainMenu></MainMenu>
-                <HeadTable></HeadTable>
-            </header>
-        )
-    }
+function Header() {
+    return(
+        <header>
+            <SocialNetworks></SocialNetworks>
+            <MainMenu></MainMenu>
+        </header>
+    )
 }
 
 export default Header;

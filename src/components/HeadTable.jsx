@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+import React  from "react";
 
-class HeadTable extends Component{
-    render(){
-        return(
-            <div>Any</div>
-        )
-    }
+function HeadTable (props) {
+    const {value} = props;
+    return(
+        <div className="Head-table-container">
+            <div className="Head-table-container-item">
+                <div>{value}</div>
+            </div>
+        </div>
+    )
 }
 
 export default HeadTable;
