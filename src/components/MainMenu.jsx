@@ -30,7 +30,7 @@ class MainMenu extends Component{
         const {pageList} = this.props;
 
         return([
-            <section className="header-menu">
+            <section key="header-menu" className="header-menu">
                 <div className="header-menu-container">
                     <img src={logo} alt="GYM"/>
                     <nav>
@@ -59,7 +59,7 @@ class MainMenu extends Component{
                     </nav>
                 </div>
             </section>,
-            <section className="Head-table">
+            <section key="head-table" className="Head-table">
                 <HeadTable value={this.state.selectedPage}/>
             </section>
          ] )

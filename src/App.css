@@ -162,6 +162,8 @@
     }
 }
 
+
+
 .Head-table {
     background-color: #b7b7b7;
     height: 300px;
@@ -188,4 +190,50 @@
     color: white;
     font-size: 25pt;
     margin-top: 7px;
+}
+
+.Timetable {
+    background-color: #f3f3f3;
+}
+
+.Timetable-container {
+    max-width: 1170px;
+    margin: auto; 
+}
+
+.Timetable-container-menu {
+    list-style: none; 
+    display: flex;
+}
+
+.Timetable-container-menu-list {
+    color: #00bff0 !important;
+}
+
+.checkedItem {
+    box-shadow: 0 0 4px 2px #00bff0 !important;
+}
+
+.Timetable-container-menu-list span {
+    font-size: 18pt !important;
+    font-weight: 300 !important;
+}
+
+.Timetable-container-table { 
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Timetable-container-table ul {
+    list-style: none;
+    display: flex;
+}
+
+.Timetable-container-table ul li:first-child {
+    width: 150px
+}
+
+.Timetable-container-table ul li:not(:first-child) {
+    width: 145px;
 }
