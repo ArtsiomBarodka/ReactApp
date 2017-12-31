@@ -204,6 +204,10 @@
 .Timetable-container-menu {
     list-style: none; 
     display: flex;
+    height: 125px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .Timetable-container-menu-list {
@@ -230,10 +234,73 @@
     display: flex;
 }
 
+.Timetable-container-table ul li {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Timetable-container-table ul li:first-child {
-    width: 150px
+    min-width: 150px;
+    background-color: #99e5f9;
+    color: white;
 }
 
 .Timetable-container-table ul li:not(:first-child) {
-    width: 145px;
+    min-width: 145px;
+}
+
+.Timetable-container-table ul:not(:first-child) li:nth-child(even) {
+    background-color: white;
+}
+
+.Timetable-container-table ul:not(:first-child) li:not(:first-child):nth-child(odd) {
+    background-color: #f2fcfe;
+}
+
+.Timetable-container-table ul:not(:first-child) li:not(:first-child){
+    border-bottom: solid 1px #00c0f079;
+    height: 99px !important;
+}
+
+
+.Timetable-container-table ul li[name="Aerobics"] {
+    color: #d15d5d;
+}
+
+.Timetable-container-table ul li[name="Crosfit"] {
+    color: #60ca50;
+}
+
+.Timetable-container-table ul li[name="Boxing"] {
+    color: #14a1cc;
+}
+
+.Timetable-container-table ul li[name="Kik Boxing"] {
+    color: #75b4ab;
+}
+
+.Timetable-container-table ul li[name="Pilates"] {
+    color: #e368ee;
+}
+
+.Timetable-container-table ul li[name="Spinning"] {
+    color: #0c0f00;
+}
+
+.days {
+    color: #00bff0;
+}
+
+.days li:first-child {
+    background-color: #00c0f085 !important;
+}
+
+.days li:nth-child(odd) {
+    background-color: #9be3fdb6;
+}
+
+.days li:nth-child(even) {
+    background-color: #c7ecfb;
 }
